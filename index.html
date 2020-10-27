@@ -67,7 +67,7 @@
 				}
 			});
 
-			game.time.events.add(3000, function() {
+			game.time.events.add(4000, function() {
 				var messageTwn = game.add.tween(message.scale).to({x: 0, y: 0}, 1000, 'Linear', true);
 				 messageTwn.onComplete.add(function() {
 				 	message.kill();
