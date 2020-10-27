@@ -67,7 +67,7 @@
 				}
 			});
 
-			game.time.events.add(2000, function() {
+			game.time.events.add(2200, function() {
 				var messageTwn = game.add.tween(message.scale).to({x: 0, y: 0}, 1000, 'Linear', true);
 				 messageTwn.onComplete.add(function() {
 				 	message.kill();
@@ -76,7 +76,7 @@
 				 	var rosesScale = (scrWidth > scrHeight) ? game.height/(1.5*roses.width) : game.width/(1.5*roses.width);
 				 	roses.scale.setTo(0);
 
-				 	var rTwn = game.add.tween(roses.scale).to({x: rosesScale, y: rosesScale}, 1200, 'Linear', true, 200);
+				 	var rTwn = game.add.tween(roses.scale).to({x: rosesScale, y: rosesScale}, 1500, 'Linear', true, 200);
 
 
 						 	game.time.events.add(2500, function(){
@@ -89,7 +89,7 @@
 					 			game.width/(1.5*mt3.width);
 					 			mt3.scale.setTo(0);
 
-					 			var mt3Twn = game.add.tween(mt3.scale).to({x: mt3Scale, y: mt3Scale}, 1200, 'Linear', true, 200);
+					 			var mt3Twn = game.add.tween(mt3.scale).to({x: mt3Scale, y: mt3Scale}, 1500, 'Linear', true, 200);
 					 				game.time.events.add(2500, function(){
 							 			mt3Twn = game.add.tween(mt3.scale).to({x: 0, y: 0}, 1000, 'Linear', true);
 							 	    	mt3Twn.onComplete.add(function() {
@@ -100,7 +100,7 @@
 							 			game.width/(1.5*mt4.width);
 							 			mt4.scale.setTo(0);
 
-							 			var mt4Twn = game.add.tween(mt4.scale).to({x: mt4Scale, y: mt4Scale}, 1200, 'Linear', true, 200);
+							 			var mt4Twn = game.add.tween(mt4.scale).to({x: mt4Scale, y: mt4Scale}, 1500, 'Linear', true, 200);
 
 							 				game.time.events.add(2500, function(){
 									 			mt4Twn = game.add.tween(mt4.scale).to({x: 0, y: 0}, 1000, 'Linear', true);
@@ -112,7 +112,7 @@
 									 			game.width/(1.5*mt5.width);
 									 			mt5.scale.setTo(0);
 
-									 			var mt5Twn = game.add.tween(mt5.scale).to({x: mt5Scale, y: mt5Scale}, 1200, 'Linear', true, 200);
+									 			var mt5Twn = game.add.tween(mt5.scale).to({x: mt5Scale, y: mt5Scale}, 1500, 'Linear', true, 200);
 									 		game.time.events.add(2500, function(){
 									 			mt5Twn = game.add.tween(mt5.scale).to({x: 0, y: 0}, 1000, 'Linear', true);
 									 	    	mt5Twn.onComplete.add(function() {
@@ -123,7 +123,7 @@
 									 			game.width/(1.5*mt6.width);
 									 			mt6.scale.setTo(0);
 
-									 			var mt6Twn = game.add.tween(mt6.scale).to({x: mt6Scale, y: mt6Scale}, 1200, 'Linear', true, 200);
+									 			var mt6Twn = game.add.tween(mt6.scale).to({x: mt6Scale, y: mt6Scale}, 1500, 'Linear', true, 200);
 
 							 					
 							 					game.time.events.add(2500, function(){
@@ -136,7 +136,7 @@
 									 			game.width/(1.5*mt7.width);
 									 			mt7.scale.setTo(0);
 
-									 			var mt7Twn = game.add.tween(mt7.scale).to({x: mt7Scale, y: mt7Scale}, 1200, 'Linear', true, 200);
+									 			var mt7Twn = game.add.tween(mt7.scale).to({x: mt7Scale, y: mt7Scale}, 1500, 'Linear', true, 200);
 
 							 						game.time.events.add(2500, function(){
 										 				mt7Twn = game.add.tween(mt7.scale).to({x: 0, y: 0}, 1000, 'Linear', true);
@@ -148,7 +148,7 @@
 										 				game.width/(1.15*mt8.width);
 										 				mt8.scale.setTo(0);
 
-										 				var mt8Twn = game.add.tween(mt8.scale).to({x: mt8Scale, y: mt8Scale}, 2200, 'Linear', true, 200);
+										 				var mt8Twn = game.add.tween(mt8.scale).to({x: mt8Scale, y: mt8Scale}, 3000, 'Linear', true, 200);
 
 
 							 					
