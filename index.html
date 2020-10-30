@@ -16,7 +16,7 @@
 		var scrHeight = window.innerHeight;
 		var game = new Phaser.Game(scrWidth, scrHeight, Phaser.CANVAS, '', 
 			{preload: preload, create: create, update: update});
-		var message, roses, mt3, mt4, mt5, mt6, mt7, mt8, mt9, mt10,mt11,mt12, mt13, mt14, mt15, mt16, mt17, mt18, mt19, mt20,mt21,mt22, mt23, mt24, mt25;
+		var message, roses, mt3, mt4, mt5, mt6, mt7, mt8, mt9, mt10,mt11,mt12, mt13, mt14, mt15, mt16, mt17, mt18, mt19, mt20,mt21,mt22, mt23, mt24, mt25,mt26;
 
 
 		function preload() {
@@ -48,6 +48,7 @@
 			game.load.image('mt23', 'MT23.jpg');
 			game.load.image('mt24', 'MT24.jpg');
 			game.load.image('mt25', 'MT25.jpg');
+			game.load.image('mt26', 'MT26.jpg');
 
 
 		}
@@ -343,12 +344,25 @@
 										 mt24.kill();
 										 mt25 = game.add.image(game.width/2, game.height/2, 'mt25');
 										 mt25.anchor.setTo(0.5);
-										 var mt25Scale = (scrWidth > scrHeight) ? game.height/(1.15*mt25.width) : 
-										 game.width/(1.15*mt25.width);
+										 var mt25Scale = (scrWidth > scrHeight) ? game.height/(1.25*mt25.width) : 
+										 game.width/(1.25*mt25.width);
 										 mt25.scale.setTo(0);
 
-										 var mt25Twn = game.add.tween(mt25.scale).to({x: mt25Scale, y: mt25Scale}, 3000, 'Linear', true, 200);
+										 var mt25Twn = game.add.tween(mt25.scale).to({x: mt25Scale, y: mt25Scale}, 2000, 'Linear', true, 200);
+							 			game.time.events.add(2800, function(){
+										 mt25Twn = game.add.tween(mt25.scale).to({x: 0, y: 0}, 1000, 'Linear', true);
+										 mt25Twn.onComplete.add(function() { 
+										 mt25.kill();
+										 mt26 = game.add.image(game.width/2, game.height/2, 'mt26');
+										 mt26.anchor.setTo(0.5);
+										 var mt26Scale = (scrWidth > scrHeight) ? game.height/(1.1*mt26.width) : 
+										 game.width/(1.1*mt26.width);
+										 mt26.scale.setTo(0);
+
+										 var mt26Twn = game.add.tween(mt26.scale).to({x: mt26Scale, y: mt26Scale}, 3000, 'Linear', true, 200);
 							 					
+													});
+												});		
 													});
 												});		
 													});
@@ -474,6 +488,9 @@
 			}
 			if(mt25){
 				game.world.bringToTop(mt25);
+			}
+			if(mt26){
+				game.world.bringToTop(mt26);
 			}
 
 		}
