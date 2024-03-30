@@ -7,7 +7,7 @@
 	<title>Chúc mừng sinh nhật chị Trang </title>
 </head>
 <body>
-	<audio controls autoplay>
+	<audio id="myAudio" controls autoplay>
   		<source src="Khuc-Hat-Mung-Sinh-Nhat-Phan-Dinh-Tung.mp3" type="audio/mpeg">
 	</audio>
 	<script type="text/javascript" src="lib.js"></script>
@@ -494,6 +494,10 @@
 			}
 
 		}
+		 window.onload = function() {
+		    var audio = document.getElementById("myAudio");
+		    audio.play();
+		  };
 	</script>
 </body>
 </html>
